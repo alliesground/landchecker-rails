@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_05_230130) do
+ActiveRecord::Schema.define(version: 2021_03_05_230743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_03_05_230130) do
     t.float "latitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "lga_code"
+    t.bigint "lga_code"
   end
 
   add_foreign_key "addresses", "lgas", column: "lga_code", primary_key: "code"
