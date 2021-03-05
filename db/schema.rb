@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_05_212832) do
+ActiveRecord::Schema.define(version: 2021_03_05_224459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,4 +22,14 @@ ActiveRecord::Schema.define(version: 2021_03_05_212832) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "properties", id: :bigint, default: nil, force: :cascade do |t|
+    t.integer "council_property_number"
+    t.float "longitude"
+    t.float "latitude"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "lga_code"
+  end
+
+  add_foreign_key "properties", "lgas", column: "lga_code", primary_key: "code"
 end
