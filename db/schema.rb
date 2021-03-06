@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_05_230743) do
+ActiveRecord::Schema.define(version: 2021_03_06_011506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_03_05_230743) do
   end
 
   create_table "properties", id: :bigint, default: nil, force: :cascade do |t|
-    t.integer "council_property_number"
+    t.bigint "council_property_number"
     t.float "longitude"
     t.float "latitude"
     t.datetime "created_at", precision: 6, null: false
