@@ -1,24 +1,14 @@
 # README
+Running the application locally
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Install Docker with Docker Compose
 
-Things you may want to cover:
+* Clone the project
 
-* Ruby version
+* Before docker-compose up or docker-compose build
 
-* System dependencies
+* export current host user's id as environment variable
+  *export UID=$(id -u)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* From inside the project root folder
+  * run docker-compose up --build
