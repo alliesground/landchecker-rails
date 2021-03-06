@@ -8,7 +8,4 @@ Running the application locally
 * export current host user's id as environment variable
   `export UID=$(id -u)`
 
-* Before docker-compose up or docker-compose build
-
-* From inside the project root folder
-  * run docker-compose up --build
+* From inside the project root folder run `docker-compose up --build`
