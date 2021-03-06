@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_06_011506) do
+ActiveRecord::Schema.define(version: 2021_03_06_012706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "addresses", primary_key: "feature_id", id: :bigint, default: nil, force: :cascade do |t|
     t.bigint "property_id", null: false
-    t.string "fulladdress"
+    t.string "full_address"
     t.string "state"
     t.integer "postcode"
     t.datetime "created_at", precision: 6, null: false
