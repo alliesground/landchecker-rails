@@ -1,0 +1,17 @@
+params[:id]
+Property.count
+Rails.env
+Property.first
+Property.create(id:1)
+Property.first
+Property.reload
+reload!
+Property.count
+params
+params[:id]
+Project.find(params[:id])
+Property.find(params[:id])
+Property.count
+Lga.count
+Property.first
+Lga.first
