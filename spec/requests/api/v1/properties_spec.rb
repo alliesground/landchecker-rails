@@ -22,4 +22,19 @@ RSpec.describe 'Properties API', type: :request do
       end
     end
   end
+
+  describe 'GET /properties/' do
+
+    it 'returns status code 200' do
+      get "/api/v1/properties"
+      expect(response).to have_http_status(200)
+    end
+
+    it 'returns all properties' do
+      property2 = lga.properties.create(id: 2)
+      get "/api/v1/properties"
+
+      expect(JSON.parse(response.body).size).to eq(2)
+    end
+  end
 end

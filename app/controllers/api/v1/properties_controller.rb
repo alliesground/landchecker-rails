@@ -1,5 +1,10 @@
 module Api::V1
   class PropertiesController < ApiController
+    def index
+      properties = Property.all
+      render json: properties, status: 200
+    end
+
     def show
       property = Property.find_by(id: params[:id])
 
